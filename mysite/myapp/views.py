@@ -10,7 +10,7 @@ def main(request: HttpRequest) -> HttpResponse:
     })
 
 def second(request: HttpRequest) -> HttpResponse:  
-    return HttpResponse("He")
+    return render(request,'second.html')
     
 def article_main(request: HttpRequest) -> HttpResponse:
     return HttpResponse("Tohle je hlavni article.")
@@ -25,3 +25,6 @@ def article(request: HttpRequest,article_id: int,name: str = '') -> HttpResponse
 
 def article_uniq(request):
     return HttpResponse("Tohle je unikatni clanek")
+
+def me(request: HttpRequest) -> HttpResponse:  
+    return render(request,'me.html')
